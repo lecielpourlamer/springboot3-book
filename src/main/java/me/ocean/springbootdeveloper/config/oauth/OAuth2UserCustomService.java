@@ -1,11 +1,13 @@
 package me.ocean.springbootdeveloper.config.oauth;
 
+import lombok.RequiredArgsConstructor;
 import me.ocean.springbootdeveloper.domain.User;
 import me.ocean.springbootdeveloper.repository.UserRepository;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
 import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.core.user.OAuth2User;
+import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
@@ -13,6 +15,8 @@ import java.util.Map;
  * Created by shlim on 30/10/2023
  */
 
+@RequiredArgsConstructor
+@Service
 public class OAuth2UserCustomService  extends DefaultOAuth2UserService {
 
     private final UserRepository userRepository;
