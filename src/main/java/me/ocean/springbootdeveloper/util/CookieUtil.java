@@ -45,7 +45,8 @@ public class CookieUtil {
                 .encodeToString(SerializationUtils.serialize(obj));
     }
 
-    // 쿠키를 역직렬화해 객체로 변환
+    // 쿠키를 역직렬화를 한 후에 객체로 변환
+    // SerializationUtils.deserialize() 메소드가 deprecated 된 것을 해결할 방안찾기
     public static <T> T deserialize(Cookie cookie, Class<T> cls) {
         return cls.cast(
                 //SerializationUtils.deserialize(
