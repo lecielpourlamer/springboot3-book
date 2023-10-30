@@ -9,7 +9,8 @@
 
 
 ### IntelliJ ###
-/src/main/resources/application.yml
+#/src/main/resources/application.yml
+*.yml
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/intellij,java,gradle
