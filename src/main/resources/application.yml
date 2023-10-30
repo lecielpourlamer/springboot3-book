@@ -18,7 +18,7 @@ spring:
 jwt:
   issuer: ajufresh@gmail.com
   secret_key: study-springboots
-
+# OAuth2 설정
   security:
     oauth2:
       client:
