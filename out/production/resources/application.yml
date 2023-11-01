@@ -1,12 +1,9 @@
 spring:
   jpa:
-    # 전송 쿼리 확인
     show-sql: true
     properties:
       hibernate:
         format_sql: true
-
-    # 테이블 생성 후에 data.sql 실행
     defer-datasource-initialization: true
   datasource: # 데이터베이스 정보 추가
     url: jdbc:h2:mem:testdb
@@ -14,7 +11,16 @@ spring:
   h2: # H2 콘솔 활성화
     console:
       enabled: true
-
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 277065327168-2bg0811a6th9u6sc34glp5hv9jvugacl.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
 jwt:
   issuer: ajufresh@gmail.com
   secret_key: study-springboots
